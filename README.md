@@ -48,25 +48,58 @@ price_orange = 3 — цена одного апельсина.
 
 ### Блок-схема
 
-![Блок-схема алгоритма](ссылка_на_картинку_или_путь_в_репозитории.png)
+<img width="522" height="1049" alt="image" src="https://github.com/user-attachments/assets/0d146883-7308-4e02-b152-5ff4b73bd153" />
+(https://drive.google.com/file/d/1Pg3q0Ecq7IGSyiZpWIS1OcalUCfn3XDj/view?usp=sharing)
 
 ## 2. Реализация программы
 
-```c
-// Сюда вставьте исходный код вашей программы
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
+#include <locale.h>
+#include <stdlib.h>
 
 int main() {
+    setlocale(LC_ALL, "Russian");
+
+    int price_apple = 1;
+    int price_pear = 2;
+    int price_orange = 3;
+
+    int apples_mon = 0;
+    int pears_mon = 0;
+    int oranges_mon = 0;
+
+    int apples_tue = 0;
+    int pears_tue = 0;
+    int oranges_tue = 0;
+
+    printf("Введите продажи за понедельник (яблоки, груши, апельсины): ");
+    scanf("%d %d %d", &apples_mon, &pears_mon, &oranges_mon);
+
+    printf("Введите продажи за вторник (яблоки, груши, апельсины): ");
+    scanf("%d %d %d", &apples_tue, &pears_tue, &oranges_tue);
+
+    int sum_mon = (apples_mon * price_apple) + (pears_mon * price_pear) + (oranges_mon * price_orange);
+    int sum_tue = (apples_tue * price_apple) + (pears_tue * price_pear) + (oranges_tue * price_orange);
+
+    printf("\n--- Результаты ---\n");
+    printf("Сумма за понедельник: %d руб.\n", sum_mon);
+    printf("Сумма за вторник: %d руб.\n", sum_tue);
+
+    while (getchar() != '\n');
+    printf("\nНажмите Enter для выхода...");
+    getchar();
+
     return 0;
 }
-```
-
 ## 3. Результаты работы программы
 
-```text
-Сюда вставьте вывод консоли или прикрепите скриншот запуска.
-```
+--- Результаты ---
+
+Сумма за понедельник: 47 руб.
+
+Сумма за вторник: 26 руб.
 
 ## 4. Информация о разработчике
 
-ФИО, группа.
+Плахута Александр Андреевич, бТИИ-262
