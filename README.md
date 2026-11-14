@@ -86,10 +86,6 @@ int main() {
     printf("Сумма за понедельник: %d руб.\n", sum_mon);
     printf("Сумма за вторник: %d руб.\n", sum_tue);
 
-    while (getchar() != '\n');
-    printf("\nНажмите Enter для выхода...");
-    getchar();
-
     return 0;
 }
 ## 3. Результаты работы программы
